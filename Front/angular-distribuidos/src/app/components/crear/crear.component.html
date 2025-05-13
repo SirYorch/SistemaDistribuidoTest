@@ -1,0 +1,13 @@
+<form (ngSubmit)="crearEstudiante()" #form="ngForm">
+  <div>
+    <label>Nombre:</label>
+    <input type="text" name="nombre" [(ngModel)]="estudiante.nombre" required />
+  </div>
+
+  <div>
+    <label>Email:</label>
+    <input type="email" name="email" [(ngModel)]="estudiante.email" required />
+  </div>
+
+  <button type="submit" [disabled]="form.invalid">Crear Estudiante</button>
+</form>

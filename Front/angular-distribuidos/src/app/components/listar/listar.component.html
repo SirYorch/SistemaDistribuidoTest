@@ -1,0 +1,26 @@
+<table>
+  <thead>
+    <tr>
+      <th>Nombre</th>
+      <th>Email</th>
+      <th colspan="2">Acciones</th>
+    </tr>
+  </thead>
+  <tbody>
+    @for (estudiante of estudiantes; track estudiante.id) {
+      <tr *ngIf="estudiante.estado === 'leer'">
+        <td>{{ estudiante.nombre }}</td>
+        <td>{{ estudiante.email }}</td>
+        <td><button class='update' (click)="actualizarEstudiante(estudiante)">Actualizar</button></td>
+        <td><button (click)="eliminarEstudiante(estudiante.id)">Eliminar</button></td>
+      </tr>
+      <tr *ngIf="estudiante.estado === 'actualizar'">
+        <td><input [(ngModel)]="estudiante.nombre" /></td>
+        <td><input [(ngModel)]="estudiante.email" /></td>
+        <td colspan="2">
+          <button (click)="guardarEstudiante(estudiante)">Guardar</button>
+        </td>
+      </tr>
+    }
+  </tbody>
+</table>
