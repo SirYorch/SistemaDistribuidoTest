@@ -11,7 +11,10 @@ export class EstudiantesService {
   constructor(private http: HttpClient) {}
 
   getEstudiantes(): Observable<[]> {
+    console.log("llamando a la api");
+    console.log(this.apiUrl);
     return this.http.get<[]>(this.apiUrl+"/listar");
+
   }
 
   crearEstudiante(estudiante: any): Observable<any> {
