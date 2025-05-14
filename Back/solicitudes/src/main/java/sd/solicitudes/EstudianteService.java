@@ -1,6 +1,7 @@
 package sd.solicitudes;
 
-
+import jakarta.ws.rs.Produces;
+import jakarta.ws.rs.core.MediaType;
 import jakarta.ws.rs.GET;
 import jakarta.ws.rs.PUT;
 import jakarta.ws.rs.DELETE;
@@ -14,6 +15,7 @@ import sd.solicitudes.models.Estudiante;
 import java.util.List;
 
 @Path("/estudiantes")
+@Produces(MediaType.APPLICATION_JSON)
 public class EstudianteService {
 
     @Inject

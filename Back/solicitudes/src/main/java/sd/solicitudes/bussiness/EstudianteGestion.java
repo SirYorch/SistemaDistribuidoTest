@@ -4,8 +4,8 @@ package sd.solicitudes.bussiness;
 import jakarta.inject.Inject;
 import sd.solicitudes.dao.EstudianteDAO;
 import sd.solicitudes.models.Estudiante;
-import javax.enterprise.context.ApplicationScoped;
-import javax.transaction.Transactional;
+import jakarta.enterprise.context.ApplicationScoped;
+import jakarta.transaction.Transactional;
 import java.util.List;
 
 @ApplicationScoped
