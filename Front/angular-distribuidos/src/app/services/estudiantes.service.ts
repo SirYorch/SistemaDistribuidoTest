@@ -6,7 +6,7 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class EstudiantesService {
-  private apiUrl = 'http://localhost:8080/solicitudes-1.0-SNAPSHOT/rs/estudiantes'; // Ajusta según tu backend
+  private apiUrl = '/api/estudiantes'; // Ajusta según tu backend
 
   constructor(private http: HttpClient) {}
 
